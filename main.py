@@ -76,7 +76,7 @@ def main() -> None:
     docs_dir = Path(config.get("output", {}).get("docs_dir", "docs"))
     docs_dir.mkdir(exist_ok=True)
     title = config.get("briefing", {}).get("title", "오늘의 모닝 브리핑")
-    base_url = config.get("output", {}).get("base_url", "") or os.getenv("GITHUB_PAGES_BASE_URL", "")
+    base_url = config.get("output", {}).get("base_url", "") or os.getenv("PAGES_BASE_URL", "")
     write_html(docs_dir / "latest.html", briefing, date_label, title=title)
     widget_payload = write_widget_json(docs_dir / "latest.json", briefing, date_label, base_url=base_url)
     (docs_dir / "latest.md").write_text(briefing, encoding="utf-8")
