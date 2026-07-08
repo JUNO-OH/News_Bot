@@ -1,0 +1,102 @@
+schedule:
+  time: "07:00"
+  timezone: "Asia/Seoul"
+
+briefing:
+  title: "오늘의 모닝 브리핑"
+  max_news_items: 7
+  target_reading_minutes: 15
+  difficulty: "한경 코리아마켓 모닝루틴을 참고한 초중급 경제 브리핑"
+  include_term_explanations: true
+  include_market_relevance: true
+  include_investment_advice: false
+  kakao_chunk_size: 190
+
+gemini:
+  model: "gemini-3.5-flash"
+  temperature: 0.2
+  max_output_tokens: 5000
+
+ranking:
+  keywords:
+    high:
+      - 금리
+      - 환율
+      - 물가
+      - 인플레이션
+      - 연준
+      - FOMC
+      - 미국
+      - 중국
+      - 반도체
+      - AI
+      - 엔비디아
+      - 데이터센터
+      - 수출
+      - 원유
+      - 유가
+      - 국채
+      - 관세
+      - 전쟁
+      - 지정학
+    medium:
+      - 전기차
+      - 배터리
+      - 클라우드
+      - 빅테크
+      - 규제
+      - 부동산
+      - 소비
+      - 고용
+      - 경기
+      - 실적
+    low:
+      - 연예
+      - 스포츠
+      - 사고
+      - 범죄
+
+collectors:
+  gdelt:
+    enabled: true
+    timespan: "24h"
+    maxrecords_per_query: 12
+    queries:
+      - "(global economy OR inflation OR interest rates OR Federal Reserve OR bond yields)"
+      - "(AI OR artificial intelligence OR semiconductor OR Nvidia OR TSMC OR Samsung Electronics OR SK Hynix)"
+      - "(China economy OR Japan economy OR Europe economy OR Middle East oil OR geopolitics)"
+      - "(export controls OR tariffs OR supply chain OR energy prices OR crude oil)"
+      - "(Korea economy OR South Korea exports OR Korean semiconductors)"
+
+  rss:
+    enabled: true
+    max_entries_per_feed: 8
+    feeds:
+      - name: "BBC Business"
+        url: "https://feeds.bbci.co.uk/news/business/rss.xml"
+      - name: "BBC Technology"
+        url: "https://feeds.bbci.co.uk/news/technology/rss.xml"
+      - name: "CNBC Economy"
+        url: "https://www.cnbc.com/id/20910258/device/rss/rss.html"
+      - name: "CNBC Technology"
+        url: "https://www.cnbc.com/id/19854910/device/rss/rss.html"
+      - name: "TechCrunch"
+        url: "https://techcrunch.com/feed/"
+      - name: "The Verge"
+        url: "https://www.theverge.com/rss/index.xml"
+
+  naver:
+    enabled: true
+    display_per_query: 10
+    queries:
+      - "세계 경제 금리 환율 물가"
+      - "AI 반도체 엔비디아 삼성전자 SK하이닉스"
+      - "중국 경제 미국 증시 유가 원자재"
+      - "한국 수출 반도체 배터리 산업"
+
+
+output:
+  docs_dir: "docs"
+  # GitHub Pages 주소를 쓰면 latest.json 안의 briefing_url에 자동 반영됩니다.
+  # 예: "https://YOUR_GITHUB_ID.github.io/morning_routine_bot"
+  base_url: ""

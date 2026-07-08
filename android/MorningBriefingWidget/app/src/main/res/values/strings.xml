@@ -1,0 +1,6 @@
+
+<resources>
+    <string name="app_name">Morning Briefing</string>
+    <!-- GitHub Pages 배포 후 latest.json 주소로 바꾸세요. -->
+    <string name="briefing_json_url">https://YOUR_GITHUB_ID.github.io/morning_routine_bot/latest.json</string>
+</resources>

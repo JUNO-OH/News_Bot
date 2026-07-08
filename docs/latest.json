@@ -1,0 +1,19 @@
+{
+  "date": "샘플",
+  "title": "오늘의 모닝 브리핑",
+  "top3": [
+    "브리핑 생성 전 샘플 데이터입니다.",
+    "GitHub Pages 배포 후 이 내용이 자동으로 바뀝니다.",
+    "Android 위젯은 latest.json을 읽어옵니다."
+  ],
+  "keywords": [
+    "경제",
+    "AI",
+    "반도체"
+  ],
+  "news_titles": [
+    "샘플 뉴스 제목"
+  ],
+  "briefing_url": "",
+  "generated_at": "sample"
+}
