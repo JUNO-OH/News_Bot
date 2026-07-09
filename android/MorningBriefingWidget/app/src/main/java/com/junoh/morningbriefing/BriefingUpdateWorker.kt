@@ -1,7 +1,6 @@
 package com.junoh.morningbriefing
 
 import android.content.Context
-import androidx.glance.appwidget.updateAll
 import androidx.work.Constraints
 import androidx.work.CoroutineWorker
 import androidx.work.ExistingPeriodicWorkPolicy
@@ -21,13 +20,14 @@ class BriefingUpdateWorker(
     override suspend fun doWork(): Result {
         return try {
             val json = BriefingRepository.fetchLatestJson(applicationContext)
-            BriefingRepository.parse(json)
+            val data = BriefingRepository.parse(json)
             BriefingRepository.save(applicationContext, json)
-            MorningBriefingWidget().updateAll(applicationContext)
+            BriefingRepository.downloadNewsImages(applicationContext, data)
+            MorningBriefingWidgetReceiver.updateAll(applicationContext)
             Result.success()
         } catch (e: Exception) {
             BriefingRepository.saveError(applicationContext, e.message ?: e.javaClass.simpleName)
-            MorningBriefingWidget().updateAll(applicationContext)
+            MorningBriefingWidgetReceiver.updateAll(applicationContext)
             Result.retry()
         }
     }
