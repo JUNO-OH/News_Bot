@@ -1,0 +1,34 @@
+[
+    {
+        "merged": "com.junoh.morningbriefing.app-debug-22:/drawable_news_image_background.xml.flat",
+        "source": "com.junoh.morningbriefing.app-main-24:/drawable/news_image_background.xml"
+    },
+    {
+        "merged": "com.junoh.morningbriefing.app-debug-22:/drawable_news_card_background.xml.flat",
+        "source": "com.junoh.morningbriefing.app-main-24:/drawable/news_card_background.xml"
+    },
+    {
+        "merged": "com.junoh.morningbriefing.app-debug-22:/drawable_market_strip_background.xml.flat",
+        "source": "com.junoh.morningbriefing.app-main-24:/drawable/market_strip_background.xml"
+    },
+    {
+        "merged": "com.junoh.morningbriefing.app-debug-22:/drawable_news_placeholder.xml.flat",
+        "source": "com.junoh.morningbriefing.app-main-24:/drawable/news_placeholder.xml"
+    },
+    {
+        "merged": "com.junoh.morningbriefing.app-debug-22:/drawable_weather_chip_background.xml.flat",
+        "source": "com.junoh.morningbriefing.app-main-24:/drawable/weather_chip_background.xml"
+    },
+    {
+        "merged": "com.junoh.morningbriefing.app-debug-22:/layout_widget_briefing.xml.flat",
+        "source": "com.junoh.morningbriefing.app-main-24:/layout/widget_briefing.xml"
+    },
+    {
+        "merged": "com.junoh.morningbriefing.app-debug-22:/xml_morning_briefing_widget_info.xml.flat",
+        "source": "com.junoh.morningbriefing.app-main-24:/xml/morning_briefing_widget_info.xml"
+    },
+    {
+        "merged": "com.junoh.morningbriefing.app-debug-22:/drawable_widget_background.xml.flat",
+        "source": "com.junoh.morningbriefing.app-main-24:/drawable/widget_background.xml"
+    }
+]

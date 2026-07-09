@@ -1,0 +1,424 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/widget_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/widget_background"
+    android:padding="14dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/widget_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:text="모닝 브리핑"
+                android:textColor="#F8FAFC"
+                android:textSize="19sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/widget_subtitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:text="오늘의 핵심"
+                android:textColor="#A9B4C7"
+                android:textSize="11sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/weather_chip_background"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="10dp"
+            android:paddingTop="6dp"
+            android:paddingRight="10dp"
+            android:paddingBottom="6dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="☀️"
+                android:textSize="18sp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="7dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/weather_temp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="--°"
+                    android:textColor="#FFFFFF"
+                    android:textSize="17sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/weather_detail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:text="서울 · 날씨"
+                    android:textColor="#D6E2F2"
+                    android:textSize="10sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/widget_date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:maxLines="1"
+        android:text="업데이트 대기 중"
+        android:textColor="#718096"
+        android:textSize="10sp" />
+
+    <TextView
+        android:id="@+id/weather_range"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:maxLines="1"
+        android:text="최고 -° · 최저 -°"
+        android:textColor="#718096"
+        android:textSize="10sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="58dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/market_strip_background"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingLeft="6dp"
+        android:paddingRight="6dp">
+
+        <LinearLayout style="@style/MarketColumn">
+            <TextView android:id="@+id/market_1_label" style="@style/MarketLabel" android:text="환율" />
+            <TextView android:id="@+id/market_1_value" style="@style/MarketValue" android:text="-" />
+            <TextView android:id="@+id/market_1_change" style="@style/MarketChange" android:text="-" />
+        </LinearLayout>
+
+        <LinearLayout style="@style/MarketColumn">
+            <TextView android:id="@+id/market_2_label" style="@style/MarketLabel" android:text="KOSPI" />
+            <TextView android:id="@+id/market_2_value" style="@style/MarketValue" android:text="-" />
+            <TextView android:id="@+id/market_2_change" style="@style/MarketChange" android:text="-" />
+        </LinearLayout>
+
+        <LinearLayout style="@style/MarketColumn">
+            <TextView android:id="@+id/market_3_label" style="@style/MarketLabel" android:text="KOSDAQ" />
+            <TextView android:id="@+id/market_3_value" style="@style/MarketValue" android:text="-" />
+            <TextView android:id="@+id/market_3_change" style="@style/MarketChange" android:text="-" />
+        </LinearLayout>
+
+        <LinearLayout style="@style/MarketColumn">
+            <TextView android:id="@+id/market_4_label" style="@style/MarketLabel" android:text="NASDAQ" />
+            <TextView android:id="@+id/market_4_value" style="@style/MarketValue" android:text="-" />
+            <TextView android:id="@+id/market_4_change" style="@style/MarketChange" android:text="-" />
+        </LinearLayout>
+
+        <LinearLayout style="@style/MarketColumn">
+            <TextView android:id="@+id/market_5_label" style="@style/MarketLabel" android:text="S&amp;P 500" />
+            <TextView android:id="@+id/market_5_value" style="@style/MarketValue" android:text="-" />
+            <TextView android:id="@+id/market_5_change" style="@style/MarketChange" android:text="-" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/news_container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/news_1_card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/news_card_background"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="9dp"
+            android:paddingTop="6dp"
+            android:paddingRight="9dp"
+            android:paddingBottom="6dp">
+
+            <ImageView
+                android:id="@+id/news_1_image"
+                android:layout_width="58dp"
+                android:layout_height="46dp"
+                android:layout_marginRight="9dp"
+                android:background="@drawable/news_image_background"
+                android:scaleType="centerCrop"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/news_1_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:maxLines="2"
+                    android:text="브리핑 데이터를 불러오는 중"
+                    android:textColor="#F8FAFC"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/news_1_summary"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text="앱을 열어 새로고침해 주세요."
+                    android:textColor="#9AA4B2"
+                    android:textSize="10sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/news_2_card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/news_card_background"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="9dp"
+            android:paddingTop="6dp"
+            android:paddingRight="9dp"
+            android:paddingBottom="6dp">
+
+            <ImageView
+                android:id="@+id/news_2_image"
+                android:layout_width="58dp"
+                android:layout_height="46dp"
+                android:layout_marginRight="9dp"
+                android:background="@drawable/news_image_background"
+                android:scaleType="centerCrop"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/news_2_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:maxLines="2"
+                    android:text="주요 뉴스"
+                    android:textColor="#F8FAFC"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/news_2_summary"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text=""
+                    android:textColor="#9AA4B2"
+                    android:textSize="10sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/news_3_card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/news_card_background"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="9dp"
+            android:paddingTop="6dp"
+            android:paddingRight="9dp"
+            android:paddingBottom="6dp">
+
+            <ImageView
+                android:id="@+id/news_3_image"
+                android:layout_width="58dp"
+                android:layout_height="46dp"
+                android:layout_marginRight="9dp"
+                android:background="@drawable/news_image_background"
+                android:scaleType="centerCrop"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/news_3_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:maxLines="2"
+                    android:text=""
+                    android:textColor="#F8FAFC"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/news_3_summary"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text=""
+                    android:textColor="#9AA4B2"
+                    android:textSize="10sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/news_4_card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/news_card_background"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="9dp"
+            android:paddingTop="6dp"
+            android:paddingRight="9dp"
+            android:paddingBottom="6dp">
+
+            <ImageView
+                android:id="@+id/news_4_image"
+                android:layout_width="58dp"
+                android:layout_height="46dp"
+                android:layout_marginRight="9dp"
+                android:background="@drawable/news_image_background"
+                android:scaleType="centerCrop"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/news_4_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:maxLines="2"
+                    android:text=""
+                    android:textColor="#F8FAFC"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/news_4_summary"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text=""
+                    android:textColor="#9AA4B2"
+                    android:textSize="10sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/news_5_card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/news_card_background"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="9dp"
+            android:paddingTop="6dp"
+            android:paddingRight="9dp"
+            android:paddingBottom="6dp">
+
+            <ImageView
+                android:id="@+id/news_5_image"
+                android:layout_width="58dp"
+                android:layout_height="46dp"
+                android:layout_marginRight="9dp"
+                android:background="@drawable/news_image_background"
+                android:scaleType="centerCrop"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/news_5_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:maxLines="2"
+                    android:text=""
+                    android:textColor="#F8FAFC"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/news_5_summary"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text=""
+                    android:textColor="#9AA4B2"
+                    android:textSize="10sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/widget_footer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
+        android:gravity="center"
+        android:maxLines="1"
+        android:text="탭해서 전체 브리핑 보기  ›"
+        android:textColor="#A9B4C7"
+        android:textSize="11sp" />
+</LinearLayout>
