@@ -3,6 +3,9 @@ from __future__ import annotations
 import json
 import os
 import re
+from urllib.parse import urljoin
+
+import requests
 from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
@@ -51,14 +54,53 @@ def _guess_category(article: Article) -> str:
     return article.category or "뉴스"
 
 
+def _extract_og_image(url: str) -> str:
+    """Try to find a representative thumbnail from article HTML.
+
+    Many feeds, especially GDELT/Naver-style links, do not include image_url directly.
+    This lightweight fallback checks common Open Graph/Twitter image tags.
+    It is best-effort and silently returns an empty string on failures.
+    """
+    if not url or not url.startswith("http"):
+        return ""
+    try:
+        resp = requests.get(
+            url,
+            timeout=4,
+            headers={
+                "User-Agent": "Mozilla/5.0 MorningBriefingBot/1.0",
+                "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+            },
+        )
+        if resp.status_code >= 400:
+            return ""
+        html = resp.text[:300_000]
+        patterns = [
+            r'<meta[^>]+property=["\']og:image["\'][^>]+content=["\']([^"\']+)["\']',
+            r'<meta[^>]+content=["\']([^"\']+)["\'][^>]+property=["\']og:image["\']',
+            r'<meta[^>]+name=["\']twitter:image["\'][^>]+content=["\']([^"\']+)["\']',
+            r'<meta[^>]+content=["\']([^"\']+)["\'][^>]+name=["\']twitter:image["\']',
+        ]
+        for pattern in patterns:
+            match = re.search(pattern, html, flags=re.I)
+            if match:
+                found = match.group(1).strip()
+                if found:
+                    return urljoin(url, found)
+    except Exception:
+        return ""
+    return ""
+
+
 def _article_payload(article: Article) -> dict[str, str]:
+    image_url = article.image_url or _extract_og_image(article.url)
     return {
         "title": _shorten(article.title, 72),
         "summary": _shorten(article.summary, 96),
         "source": article.source or "뉴스",
         "published_at": article.published_at or "",
         "url": article.url,
-        "image_url": article.image_url or "",
+        "image_url": image_url or "",
         "category": _guess_category(article),
     }
 

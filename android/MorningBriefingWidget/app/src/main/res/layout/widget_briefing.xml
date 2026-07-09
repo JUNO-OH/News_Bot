@@ -143,273 +143,35 @@
         </LinearLayout>
     </LinearLayout>
 
-    <LinearLayout
-        android:id="@+id/news_container"
+    <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_marginTop="8dp"
-        android:layout_weight="1"
-        android:orientation="vertical">
+        android:layout_weight="1">
 
-        <LinearLayout
-            android:id="@+id/news_1_card"
+        <ListView
+            android:id="@+id/news_list"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/news_card_background"
-            android:gravity="center_vertical"
-            android:orientation="horizontal"
-            android:paddingLeft="9dp"
-            android:paddingTop="6dp"
-            android:paddingRight="9dp"
-            android:paddingBottom="6dp">
+            android:layout_height="match_parent"
+            android:cacheColorHint="@android:color/transparent"
+            android:divider="@android:color/transparent"
+            android:dividerHeight="6dp"
+            android:fadingEdge="none"
+            android:footerDividersEnabled="false"
+            android:headerDividersEnabled="false"
+            android:overScrollMode="never"
+            android:scrollbarStyle="insideOverlay"
+            android:verticalScrollBarEnabled="true" />
 
-            <ImageView
-                android:id="@+id/news_1_image"
-                android:layout_width="58dp"
-                android:layout_height="46dp"
-                android:layout_marginRight="9dp"
-                android:background="@drawable/news_image_background"
-                android:scaleType="centerCrop"
-                android:visibility="gone" />
-
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:orientation="vertical">
-
-                <TextView
-                    android:id="@+id/news_1_title"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:ellipsize="end"
-                    android:maxLines="2"
-                    android:text="브리핑 데이터를 불러오는 중"
-                    android:textColor="#F8FAFC"
-                    android:textSize="12sp"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:id="@+id/news_1_summary"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="2dp"
-                    android:ellipsize="end"
-                    android:maxLines="1"
-                    android:text="앱을 열어 새로고침해 주세요."
-                    android:textColor="#9AA4B2"
-                    android:textSize="10sp" />
-            </LinearLayout>
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/news_2_card"
+        <TextView
+            android:id="@+id/news_empty"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:background="@drawable/news_card_background"
-            android:gravity="center_vertical"
-            android:orientation="horizontal"
-            android:paddingLeft="9dp"
-            android:paddingTop="6dp"
-            android:paddingRight="9dp"
-            android:paddingBottom="6dp">
-
-            <ImageView
-                android:id="@+id/news_2_image"
-                android:layout_width="58dp"
-                android:layout_height="46dp"
-                android:layout_marginRight="9dp"
-                android:background="@drawable/news_image_background"
-                android:scaleType="centerCrop"
-                android:visibility="gone" />
-
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:orientation="vertical">
-
-                <TextView
-                    android:id="@+id/news_2_title"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:ellipsize="end"
-                    android:maxLines="2"
-                    android:text="주요 뉴스"
-                    android:textColor="#F8FAFC"
-                    android:textSize="12sp"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:id="@+id/news_2_summary"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="2dp"
-                    android:ellipsize="end"
-                    android:maxLines="1"
-                    android:text=""
-                    android:textColor="#9AA4B2"
-                    android:textSize="10sp" />
-            </LinearLayout>
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/news_3_card"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:background="@drawable/news_card_background"
-            android:gravity="center_vertical"
-            android:orientation="horizontal"
-            android:paddingLeft="9dp"
-            android:paddingTop="6dp"
-            android:paddingRight="9dp"
-            android:paddingBottom="6dp">
-
-            <ImageView
-                android:id="@+id/news_3_image"
-                android:layout_width="58dp"
-                android:layout_height="46dp"
-                android:layout_marginRight="9dp"
-                android:background="@drawable/news_image_background"
-                android:scaleType="centerCrop"
-                android:visibility="gone" />
-
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:orientation="vertical">
-
-                <TextView
-                    android:id="@+id/news_3_title"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:ellipsize="end"
-                    android:maxLines="2"
-                    android:text=""
-                    android:textColor="#F8FAFC"
-                    android:textSize="12sp"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:id="@+id/news_3_summary"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="2dp"
-                    android:ellipsize="end"
-                    android:maxLines="1"
-                    android:text=""
-                    android:textColor="#9AA4B2"
-                    android:textSize="10sp" />
-            </LinearLayout>
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/news_4_card"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:background="@drawable/news_card_background"
-            android:gravity="center_vertical"
-            android:orientation="horizontal"
-            android:paddingLeft="9dp"
-            android:paddingTop="6dp"
-            android:paddingRight="9dp"
-            android:paddingBottom="6dp">
-
-            <ImageView
-                android:id="@+id/news_4_image"
-                android:layout_width="58dp"
-                android:layout_height="46dp"
-                android:layout_marginRight="9dp"
-                android:background="@drawable/news_image_background"
-                android:scaleType="centerCrop"
-                android:visibility="gone" />
-
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:orientation="vertical">
-
-                <TextView
-                    android:id="@+id/news_4_title"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:ellipsize="end"
-                    android:maxLines="2"
-                    android:text=""
-                    android:textColor="#F8FAFC"
-                    android:textSize="12sp"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:id="@+id/news_4_summary"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="2dp"
-                    android:ellipsize="end"
-                    android:maxLines="1"
-                    android:text=""
-                    android:textColor="#9AA4B2"
-                    android:textSize="10sp" />
-            </LinearLayout>
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/news_5_card"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:background="@drawable/news_card_background"
-            android:gravity="center_vertical"
-            android:orientation="horizontal"
-            android:paddingLeft="9dp"
-            android:paddingTop="6dp"
-            android:paddingRight="9dp"
-            android:paddingBottom="6dp">
-
-            <ImageView
-                android:id="@+id/news_5_image"
-                android:layout_width="58dp"
-                android:layout_height="46dp"
-                android:layout_marginRight="9dp"
-                android:background="@drawable/news_image_background"
-                android:scaleType="centerCrop"
-                android:visibility="gone" />
-
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:orientation="vertical">
-
-                <TextView
-                    android:id="@+id/news_5_title"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:ellipsize="end"
-                    android:maxLines="2"
-                    android:text=""
-                    android:textColor="#F8FAFC"
-                    android:textSize="12sp"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:id="@+id/news_5_summary"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="2dp"
-                    android:ellipsize="end"
-                    android:maxLines="1"
-                    android:text=""
-                    android:textColor="#9AA4B2"
-                    android:textSize="10sp" />
-            </LinearLayout>
-        </LinearLayout>
-    </LinearLayout>
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="브리핑 데이터를 불러오는 중입니다."
+            android:textColor="#9AA4B2"
+            android:textSize="12sp" />
+    </FrameLayout>
 
     <TextView
         android:id="@+id/widget_footer"
@@ -418,7 +180,7 @@
         android:layout_marginTop="7dp"
         android:gravity="center"
         android:maxLines="1"
-        android:text="탭해서 전체 브리핑 보기  ›"
+        android:text="뉴스 영역은 스크롤 가능  ›"
         android:textColor="#A9B4C7"
         android:textSize="11sp" />
 </LinearLayout>
