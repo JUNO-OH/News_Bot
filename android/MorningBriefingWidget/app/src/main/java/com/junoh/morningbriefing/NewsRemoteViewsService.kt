@@ -3,9 +3,9 @@ package com.junoh.morningbriefing
 import android.content.Context
 import android.content.Intent
 import android.net.Uri
-import android.view.View
 import android.widget.RemoteViews
 import android.widget.RemoteViewsService
+import java.util.Locale
 
 class NewsRemoteViewsService : RemoteViewsService() {
     override fun onGetViewFactory(intent: Intent): RemoteViewsFactory {
@@ -76,39 +76,72 @@ class NewsRemoteViewsFactory(
 
     override fun hasStableIds(): Boolean = false
 
+    private fun normalizedTitle(value: String): String {
+        return value.lowercase(Locale.ROOT)
+            .replace(Regex("\\s+"), " ")
+            .replace("…", "")
+            .trim()
+    }
+
+    private fun MutableList<WidgetNewsRow>.addUnique(row: WidgetNewsRow, seen: MutableSet<String>) {
+        val key = normalizedTitle(row.title)
+        if (key.isBlank()) return
+        if (seen.add(key)) add(row)
+    }
+
     private fun loadRows() {
         val data = BriefingRepository.read(context)
         val result = mutableListOf<WidgetNewsRow>()
+        val seen = mutableSetOf<String>()
 
+        // 1) 실제 news 배열을 전부 우선 표시한다. 이미지가 있는 항목은 이미지 카드, 없는 항목은 텍스트 카드로 자동 표시된다.
         data.news.forEachIndexed { index, item ->
             if (item.title.isBlank()) return@forEachIndexed
             val parts = listOf(item.category, item.source)
                 .filter { it.isNotBlank() && it != "뉴스" }
             val prefix = if (parts.isNotEmpty()) parts.joinToString(" · ") + " · " else ""
             val subtitleBody = item.summary.ifBlank { "자세한 내용은 전체 브리핑에서 확인" }
-            result += WidgetNewsRow(
-                title = item.title,
-                subtitle = prefix + subtitleBody,
-                url = item.url.ifBlank { data.briefingUrl },
-                newsIndex = index
+            result.addUnique(
+                WidgetNewsRow(
+                    title = item.title,
+                    subtitle = prefix + subtitleBody,
+                    url = item.url.ifBlank { data.briefingUrl },
+                    newsIndex = index
+                ),
+                seen
             )
         }
 
-        val fallbackTitles = when {
-            data.newsTitles.isNotEmpty() -> data.newsTitles
-            data.top3.isNotEmpty() -> data.top3
-            else -> emptyList()
+        // 2) news 배열이 적은 날에는 Gemini 브리핑에서 뽑힌 제목과 핵심 3줄도 추가해 빈 공간을 줄인다.
+        data.newsTitles.forEachIndexed { index, title ->
+            result.addUnique(
+                WidgetNewsRow(
+                    title = title,
+                    subtitle = when (index) {
+                        0 -> "전체 브리핑에서 자세한 배경 확인"
+                        else -> "중요 뉴스 · 자세한 내용은 전체 브리핑에서 확인"
+                    },
+                    url = data.briefingUrl,
+                    newsIndex = null
+                ),
+                seen
+            )
         }
 
-        fallbackTitles.forEachIndexed { index, title ->
-            if (title.isBlank()) return@forEachIndexed
-            if (result.any { it.title == title }) return@forEachIndexed
-            val subtitle = when (index) {
-                0 -> "오늘의 핵심 포인트"
-                1 -> "시장과 산업 흐름에서 확인할 내용"
-                else -> "자세한 내용은 전체 브리핑에서 확인"
-            }
-            result += WidgetNewsRow(title, subtitle, data.briefingUrl, null)
+        data.top3.forEachIndexed { index, title ->
+            result.addUnique(
+                WidgetNewsRow(
+                    title = title,
+                    subtitle = when (index) {
+                        0 -> "오늘의 핵심 포인트"
+                        1 -> "시장과 산업 흐름에서 확인할 내용"
+                        else -> "경제 공부용 핵심 요약"
+                    },
+                    url = data.briefingUrl,
+                    newsIndex = null
+                ),
+                seen
+            )
         }
 
         if (result.isEmpty()) {
@@ -120,7 +153,7 @@ class NewsRemoteViewsFactory(
             )
         }
 
-        // 스크롤 가능한 위젯이므로 더 많이 넣어도 된다. GitHub JSON에 뉴스가 늘어나면 자동 반영된다.
-        rows = result.take(12)
+        // collection widget이므로 충분히 많이 넣는다. 화면 크기에 따라 스크롤된다.
+        rows = result.take(15)
     }
 }

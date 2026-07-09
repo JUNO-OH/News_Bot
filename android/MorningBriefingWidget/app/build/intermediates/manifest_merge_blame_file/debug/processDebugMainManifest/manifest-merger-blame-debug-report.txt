@@ -36,7 +36,7 @@
 21-->[androidx.core:core:1.17.0] C:\Users\junoc\.gradle\caches\9.3.0\transforms\5f2b9d9238eb48d66d8c9a76be5d3ddc\workspace\transformed\core-1.17.0\AndroidManifest.xml:26:22-94
 22
 23    <application
-23-->C:\Users\junoc\Documents\GitHub\News_Bot_fresh\News_Bot\android\MorningBriefingWidget\app\src\main\AndroidManifest.xml:6:5-31:19
+23-->C:\Users\junoc\Documents\GitHub\News_Bot_fresh\News_Bot\android\MorningBriefingWidget\app\src\main\AndroidManifest.xml:6:5-37:19
 24        android:name="com.junoh.morningbriefing.MorningBriefingApp"
 24-->C:\Users\junoc\Documents\GitHub\News_Bot_fresh\News_Bot\android\MorningBriefingWidget\app\src\main\AndroidManifest.xml:7:9-43
 25        android:allowBackup="true"
@@ -89,144 +89,153 @@
 51-->C:\Users\junoc\Documents\GitHub\News_Bot_fresh\News_Bot\android\MorningBriefingWidget\app\src\main\AndroidManifest.xml:29:17-69
 52        </receiver>
 53
-54        <provider
-54-->[androidx.work:work-runtime:2.11.2] C:\Users\junoc\.gradle\caches\9.3.0\transforms\35546a2d6873015d4d5f4a9193514b5a\workspace\transformed\work-runtime-2.11.2\AndroidManifest.xml:29:9-37:20
-55            android:name="androidx.startup.InitializationProvider"
-55-->[androidx.work:work-runtime:2.11.2] C:\Users\junoc\.gradle\caches\9.3.0\transforms\35546a2d6873015d4d5f4a9193514b5a\workspace\transformed\work-runtime-2.11.2\AndroidManifest.xml:30:13-67
-56            android:authorities="com.junoh.morningbriefing.androidx-startup"
-56-->[androidx.work:work-runtime:2.11.2] C:\Users\junoc\.gradle\caches\9.3.0\transforms\35546a2d6873015d4d5f4a9193514b5a\workspace\transformed\work-runtime-2.11.2\AndroidManifest.xml:31:13-68
-57            android:exported="false" >
-57-->[androidx.work:work-runtime:2.11.2] C:\Users\junoc\.gradle\caches\9.3.0\transforms\35546a2d6873015d4d5f4a9193514b5a\workspace\transformed\work-runtime-2.11.2\AndroidManifest.xml:32:13-37
-58            <meta-data
-58-->[androidx.work:work-runtime:2.11.2] C:\Users\junoc\.gradle\caches\9.3.0\transforms\35546a2d6873015d4d5f4a9193514b5a\workspace\transformed\work-runtime-2.11.2\AndroidManifest.xml:34:13-36:52
-59                android:name="androidx.work.WorkManagerInitializer"
-59-->[androidx.work:work-runtime:2.11.2] C:\Users\junoc\.gradle\caches\9.3.0\transforms\35546a2d6873015d4d5f4a9193514b5a\workspace\transformed\work-runtime-2.11.2\AndroidManifest.xml:35:17-68
-60                android:value="androidx.startup" />
-60-->[androidx.work:work-runtime:2.11.2] C:\Users\junoc\.gradle\caches\9.3.0\transforms\35546a2d6873015d4d5f4a9193514b5a\workspace\transformed\work-runtime-2.11.2\AndroidManifest.xml:36:17-49
-61            <meta-data
-61-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\junoc\.gradle\caches\9.3.0\transforms\403a791140ab97d275462b1ab231d58d\workspace\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:29:13-31:52
-62                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
-62-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\junoc\.gradle\caches\9.3.0\transforms\403a791140ab97d275462b1ab231d58d\workspace\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:30:17-85
-63                android:value="androidx.startup" />
-63-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\junoc\.gradle\caches\9.3.0\transforms\403a791140ab97d275462b1ab231d58d\workspace\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:31:17-49
-64        </provider>
-65
-66        <service
-66-->[androidx.work:work-runtime:2.11.2] C:\Users\junoc\.gradle\caches\9.3.0\transforms\35546a2d6873015d4d5f4a9193514b5a\workspace\transformed\work-runtime-2.11.2\AndroidManifest.xml:39:9-45:35
-67            android:name="androidx.work.impl.background.systemjob.SystemJobService"
-67-->[androidx.work:work-runtime:2.11.2] C:\Users\junoc\.gradle\caches\9.3.0\transforms\35546a2d6873015d4d5f4a9193514b5a\workspace\transformed\work-runtime-2.11.2\AndroidManifest.xml:40:13-84
-68            android:directBootAware="false"
-68-->[androidx.work:work-runtime:2.11.2] C:\Users\junoc\.gradle\caches\9.3.0\transforms\35546a2d6873015d4d5f4a9193514b5a\workspace\transformed\work-runtime-2.11.2\AndroidManifest.xml:41:13-44
-69            android:enabled="@bool/enable_system_job_service_default"
-69-->[androidx.work:work-runtime:2.11.2] C:\Users\junoc\.gradle\caches\9.3.0\transforms\35546a2d6873015d4d5f4a9193514b5a\workspace\transformed\work-runtime-2.11.2\AndroidManifest.xml:42:13-70
-70            android:exported="true"
-70-->[androidx.work:work-runtime:2.11.2] C:\Users\junoc\.gradle\caches\9.3.0\transforms\35546a2d6873015d4d5f4a9193514b5a\workspace\transformed\work-runtime-2.11.2\AndroidManifest.xml:43:13-36
-71            android:permission="android.permission.BIND_JOB_SERVICE" />
-71-->[androidx.work:work-runtime:2.11.2] C:\Users\junoc\.gradle\caches\9.3.0\transforms\35546a2d6873015d4d5f4a9193514b5a\workspace\transformed\work-runtime-2.11.2\AndroidManifest.xml:44:13-69
-72        <service
-72-->[androidx.work:work-runtime:2.11.2] C:\Users\junoc\.gradle\caches\9.3.0\transforms\35546a2d6873015d4d5f4a9193514b5a\workspace\transformed\work-runtime-2.11.2\AndroidManifest.xml:46:9-52:35
-73            android:name="androidx.work.impl.foreground.SystemForegroundService"
-73-->[androidx.work:work-runtime:2.11.2] C:\Users\junoc\.gradle\caches\9.3.0\transforms\35546a2d6873015d4d5f4a9193514b5a\workspace\transformed\work-runtime-2.11.2\AndroidManifest.xml:47:13-81
-74            android:directBootAware="false"
-74-->[androidx.work:work-runtime:2.11.2] C:\Users\junoc\.gradle\caches\9.3.0\transforms\35546a2d6873015d4d5f4a9193514b5a\workspace\transformed\work-runtime-2.11.2\AndroidManifest.xml:48:13-44
-75            android:enabled="@bool/enable_system_foreground_service_default"
-75-->[androidx.work:work-runtime:2.11.2] C:\Users\junoc\.gradle\caches\9.3.0\transforms\35546a2d6873015d4d5f4a9193514b5a\workspace\transformed\work-runtime-2.11.2\AndroidManifest.xml:49:13-77
-76            android:exported="false" />
-76-->[androidx.work:work-runtime:2.11.2] C:\Users\junoc\.gradle\caches\9.3.0\transforms\35546a2d6873015d4d5f4a9193514b5a\workspace\transformed\work-runtime-2.11.2\AndroidManifest.xml:50:13-37
-77
-78        <receiver
-78-->[androidx.work:work-runtime:2.11.2] C:\Users\junoc\.gradle\caches\9.3.0\transforms\35546a2d6873015d4d5f4a9193514b5a\workspace\transformed\work-runtime-2.11.2\AndroidManifest.xml:54:9-59:35
-79            android:name="androidx.work.impl.utils.ForceStopRunnable$BroadcastReceiver"
-79-->[androidx.work:work-runtime:2.11.2] C:\Users\junoc\.gradle\caches\9.3.0\transforms\35546a2d6873015d4d5f4a9193514b5a\workspace\transformed\work-runtime-2.11.2\AndroidManifest.xml:55:13-88
-80            android:directBootAware="false"
-80-->[androidx.work:work-runtime:2.11.2] C:\Users\junoc\.gradle\caches\9.3.0\transforms\35546a2d6873015d4d5f4a9193514b5a\workspace\transformed\work-runtime-2.11.2\AndroidManifest.xml:56:13-44
-81            android:enabled="true"
-81-->[androidx.work:work-runtime:2.11.2] C:\Users\junoc\.gradle\caches\9.3.0\transforms\35546a2d6873015d4d5f4a9193514b5a\workspace\transformed\work-runtime-2.11.2\AndroidManifest.xml:57:13-35
-82            android:exported="false" />
-82-->[androidx.work:work-runtime:2.11.2] C:\Users\junoc\.gradle\caches\9.3.0\transforms\35546a2d6873015d4d5f4a9193514b5a\workspace\transformed\work-runtime-2.11.2\AndroidManifest.xml:58:13-37
+54        <service
+54-->C:\Users\junoc\Documents\GitHub\News_Bot_fresh\News_Bot\android\MorningBriefingWidget\app\src\main\AndroidManifest.xml:32:9-35:40
+55            android:name="com.junoh.morningbriefing.NewsRemoteViewsService"
+55-->C:\Users\junoc\Documents\GitHub\News_Bot_fresh\News_Bot\android\MorningBriefingWidget\app\src\main\AndroidManifest.xml:33:13-51
+56            android:exported="false"
+56-->C:\Users\junoc\Documents\GitHub\News_Bot_fresh\News_Bot\android\MorningBriefingWidget\app\src\main\AndroidManifest.xml:35:13-37
+57            android:permission="android.permission.BIND_REMOTEVIEWS" />
+57-->C:\Users\junoc\Documents\GitHub\News_Bot_fresh\News_Bot\android\MorningBriefingWidget\app\src\main\AndroidManifest.xml:34:13-69
+58
+59        <provider
+59-->[androidx.work:work-runtime:2.11.2] C:\Users\junoc\.gradle\caches\9.3.0\transforms\35546a2d6873015d4d5f4a9193514b5a\workspace\transformed\work-runtime-2.11.2\AndroidManifest.xml:29:9-37:20
+60            android:name="androidx.startup.InitializationProvider"
+60-->[androidx.work:work-runtime:2.11.2] C:\Users\junoc\.gradle\caches\9.3.0\transforms\35546a2d6873015d4d5f4a9193514b5a\workspace\transformed\work-runtime-2.11.2\AndroidManifest.xml:30:13-67
+61            android:authorities="com.junoh.morningbriefing.androidx-startup"
+61-->[androidx.work:work-runtime:2.11.2] C:\Users\junoc\.gradle\caches\9.3.0\transforms\35546a2d6873015d4d5f4a9193514b5a\workspace\transformed\work-runtime-2.11.2\AndroidManifest.xml:31:13-68
+62            android:exported="false" >
+62-->[androidx.work:work-runtime:2.11.2] C:\Users\junoc\.gradle\caches\9.3.0\transforms\35546a2d6873015d4d5f4a9193514b5a\workspace\transformed\work-runtime-2.11.2\AndroidManifest.xml:32:13-37
+63            <meta-data
+63-->[androidx.work:work-runtime:2.11.2] C:\Users\junoc\.gradle\caches\9.3.0\transforms\35546a2d6873015d4d5f4a9193514b5a\workspace\transformed\work-runtime-2.11.2\AndroidManifest.xml:34:13-36:52
+64                android:name="androidx.work.WorkManagerInitializer"
+64-->[androidx.work:work-runtime:2.11.2] C:\Users\junoc\.gradle\caches\9.3.0\transforms\35546a2d6873015d4d5f4a9193514b5a\workspace\transformed\work-runtime-2.11.2\AndroidManifest.xml:35:17-68
+65                android:value="androidx.startup" />
+65-->[androidx.work:work-runtime:2.11.2] C:\Users\junoc\.gradle\caches\9.3.0\transforms\35546a2d6873015d4d5f4a9193514b5a\workspace\transformed\work-runtime-2.11.2\AndroidManifest.xml:36:17-49
+66            <meta-data
+66-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\junoc\.gradle\caches\9.3.0\transforms\403a791140ab97d275462b1ab231d58d\workspace\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:29:13-31:52
+67                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
+67-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\junoc\.gradle\caches\9.3.0\transforms\403a791140ab97d275462b1ab231d58d\workspace\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:30:17-85
+68                android:value="androidx.startup" />
+68-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\junoc\.gradle\caches\9.3.0\transforms\403a791140ab97d275462b1ab231d58d\workspace\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:31:17-49
+69        </provider>
+70
+71        <service
+71-->[androidx.work:work-runtime:2.11.2] C:\Users\junoc\.gradle\caches\9.3.0\transforms\35546a2d6873015d4d5f4a9193514b5a\workspace\transformed\work-runtime-2.11.2\AndroidManifest.xml:39:9-45:35
+72            android:name="androidx.work.impl.background.systemjob.SystemJobService"
+72-->[androidx.work:work-runtime:2.11.2] C:\Users\junoc\.gradle\caches\9.3.0\transforms\35546a2d6873015d4d5f4a9193514b5a\workspace\transformed\work-runtime-2.11.2\AndroidManifest.xml:40:13-84
+73            android:directBootAware="false"
+73-->[androidx.work:work-runtime:2.11.2] C:\Users\junoc\.gradle\caches\9.3.0\transforms\35546a2d6873015d4d5f4a9193514b5a\workspace\transformed\work-runtime-2.11.2\AndroidManifest.xml:41:13-44
+74            android:enabled="@bool/enable_system_job_service_default"
+74-->[androidx.work:work-runtime:2.11.2] C:\Users\junoc\.gradle\caches\9.3.0\transforms\35546a2d6873015d4d5f4a9193514b5a\workspace\transformed\work-runtime-2.11.2\AndroidManifest.xml:42:13-70
+75            android:exported="true"
+75-->[androidx.work:work-runtime:2.11.2] C:\Users\junoc\.gradle\caches\9.3.0\transforms\35546a2d6873015d4d5f4a9193514b5a\workspace\transformed\work-runtime-2.11.2\AndroidManifest.xml:43:13-36
+76            android:permission="android.permission.BIND_JOB_SERVICE" />
+76-->[androidx.work:work-runtime:2.11.2] C:\Users\junoc\.gradle\caches\9.3.0\transforms\35546a2d6873015d4d5f4a9193514b5a\workspace\transformed\work-runtime-2.11.2\AndroidManifest.xml:44:13-69
+77        <service
+77-->[androidx.work:work-runtime:2.11.2] C:\Users\junoc\.gradle\caches\9.3.0\transforms\35546a2d6873015d4d5f4a9193514b5a\workspace\transformed\work-runtime-2.11.2\AndroidManifest.xml:46:9-52:35
+78            android:name="androidx.work.impl.foreground.SystemForegroundService"
+78-->[androidx.work:work-runtime:2.11.2] C:\Users\junoc\.gradle\caches\9.3.0\transforms\35546a2d6873015d4d5f4a9193514b5a\workspace\transformed\work-runtime-2.11.2\AndroidManifest.xml:47:13-81
+79            android:directBootAware="false"
+79-->[androidx.work:work-runtime:2.11.2] C:\Users\junoc\.gradle\caches\9.3.0\transforms\35546a2d6873015d4d5f4a9193514b5a\workspace\transformed\work-runtime-2.11.2\AndroidManifest.xml:48:13-44
+80            android:enabled="@bool/enable_system_foreground_service_default"
+80-->[androidx.work:work-runtime:2.11.2] C:\Users\junoc\.gradle\caches\9.3.0\transforms\35546a2d6873015d4d5f4a9193514b5a\workspace\transformed\work-runtime-2.11.2\AndroidManifest.xml:49:13-77
+81            android:exported="false" />
+81-->[androidx.work:work-runtime:2.11.2] C:\Users\junoc\.gradle\caches\9.3.0\transforms\35546a2d6873015d4d5f4a9193514b5a\workspace\transformed\work-runtime-2.11.2\AndroidManifest.xml:50:13-37
+82
 83        <receiver
-83-->[androidx.work:work-runtime:2.11.2] C:\Users\junoc\.gradle\caches\9.3.0\transforms\35546a2d6873015d4d5f4a9193514b5a\workspace\transformed\work-runtime-2.11.2\AndroidManifest.xml:60:9-69:20
-84            android:name="androidx.work.impl.background.systemalarm.RescheduleReceiver"
-84-->[androidx.work:work-runtime:2.11.2] C:\Users\junoc\.gradle\caches\9.3.0\transforms\35546a2d6873015d4d5f4a9193514b5a\workspace\transformed\work-runtime-2.11.2\AndroidManifest.xml:61:13-88
+83-->[androidx.work:work-runtime:2.11.2] C:\Users\junoc\.gradle\caches\9.3.0\transforms\35546a2d6873015d4d5f4a9193514b5a\workspace\transformed\work-runtime-2.11.2\AndroidManifest.xml:54:9-59:35
+84            android:name="androidx.work.impl.utils.ForceStopRunnable$BroadcastReceiver"
+84-->[androidx.work:work-runtime:2.11.2] C:\Users\junoc\.gradle\caches\9.3.0\transforms\35546a2d6873015d4d5f4a9193514b5a\workspace\transformed\work-runtime-2.11.2\AndroidManifest.xml:55:13-88
 85            android:directBootAware="false"
-85-->[androidx.work:work-runtime:2.11.2] C:\Users\junoc\.gradle\caches\9.3.0\transforms\35546a2d6873015d4d5f4a9193514b5a\workspace\transformed\work-runtime-2.11.2\AndroidManifest.xml:62:13-44
-86            android:enabled="false"
-86-->[androidx.work:work-runtime:2.11.2] C:\Users\junoc\.gradle\caches\9.3.0\transforms\35546a2d6873015d4d5f4a9193514b5a\workspace\transformed\work-runtime-2.11.2\AndroidManifest.xml:63:13-36
-87            android:exported="false" >
-87-->[androidx.work:work-runtime:2.11.2] C:\Users\junoc\.gradle\caches\9.3.0\transforms\35546a2d6873015d4d5f4a9193514b5a\workspace\transformed\work-runtime-2.11.2\AndroidManifest.xml:64:13-37
-88            <intent-filter>
-88-->[androidx.work:work-runtime:2.11.2] C:\Users\junoc\.gradle\caches\9.3.0\transforms\35546a2d6873015d4d5f4a9193514b5a\workspace\transformed\work-runtime-2.11.2\AndroidManifest.xml:66:13-68:29
-89                <action android:name="android.intent.action.BOOT_COMPLETED" />
-89-->[androidx.work:work-runtime:2.11.2] C:\Users\junoc\.gradle\caches\9.3.0\transforms\35546a2d6873015d4d5f4a9193514b5a\workspace\transformed\work-runtime-2.11.2\AndroidManifest.xml:67:17-79
-89-->[androidx.work:work-runtime:2.11.2] C:\Users\junoc\.gradle\caches\9.3.0\transforms\35546a2d6873015d4d5f4a9193514b5a\workspace\transformed\work-runtime-2.11.2\AndroidManifest.xml:67:25-76
-90            </intent-filter>
-91        </receiver>
-92        <receiver
-92-->[androidx.work:work-runtime:2.11.2] C:\Users\junoc\.gradle\caches\9.3.0\transforms\35546a2d6873015d4d5f4a9193514b5a\workspace\transformed\work-runtime-2.11.2\AndroidManifest.xml:70:9-80:20
-93            android:name="androidx.work.impl.diagnostics.DiagnosticsReceiver"
-93-->[androidx.work:work-runtime:2.11.2] C:\Users\junoc\.gradle\caches\9.3.0\transforms\35546a2d6873015d4d5f4a9193514b5a\workspace\transformed\work-runtime-2.11.2\AndroidManifest.xml:71:13-78
-94            android:directBootAware="false"
-94-->[androidx.work:work-runtime:2.11.2] C:\Users\junoc\.gradle\caches\9.3.0\transforms\35546a2d6873015d4d5f4a9193514b5a\workspace\transformed\work-runtime-2.11.2\AndroidManifest.xml:72:13-44
-95            android:enabled="true"
-95-->[androidx.work:work-runtime:2.11.2] C:\Users\junoc\.gradle\caches\9.3.0\transforms\35546a2d6873015d4d5f4a9193514b5a\workspace\transformed\work-runtime-2.11.2\AndroidManifest.xml:73:13-35
-96            android:exported="true"
-96-->[androidx.work:work-runtime:2.11.2] C:\Users\junoc\.gradle\caches\9.3.0\transforms\35546a2d6873015d4d5f4a9193514b5a\workspace\transformed\work-runtime-2.11.2\AndroidManifest.xml:74:13-36
-97            android:permission="android.permission.DUMP" >
-97-->[androidx.work:work-runtime:2.11.2] C:\Users\junoc\.gradle\caches\9.3.0\transforms\35546a2d6873015d4d5f4a9193514b5a\workspace\transformed\work-runtime-2.11.2\AndroidManifest.xml:75:13-57
-98            <intent-filter>
-98-->[androidx.work:work-runtime:2.11.2] C:\Users\junoc\.gradle\caches\9.3.0\transforms\35546a2d6873015d4d5f4a9193514b5a\workspace\transformed\work-runtime-2.11.2\AndroidManifest.xml:77:13-79:29
-99                <action android:name="androidx.work.diagnostics.REQUEST_DIAGNOSTICS" />
-99-->[androidx.work:work-runtime:2.11.2] C:\Users\junoc\.gradle\caches\9.3.0\transforms\35546a2d6873015d4d5f4a9193514b5a\workspace\transformed\work-runtime-2.11.2\AndroidManifest.xml:78:17-88
-99-->[androidx.work:work-runtime:2.11.2] C:\Users\junoc\.gradle\caches\9.3.0\transforms\35546a2d6873015d4d5f4a9193514b5a\workspace\transformed\work-runtime-2.11.2\AndroidManifest.xml:78:25-85
-100            </intent-filter>
-101        </receiver>
-102
-103        <service
-103-->[androidx.room:room-runtime-android:2.7.0] C:\Users\junoc\.gradle\caches\9.3.0\transforms\c5c721bbbd7657f0b3f4c90a2837a7ad\workspace\transformed\jetified-room-runtime-release\AndroidManifest.xml:24:9-28:63
-104            android:name="androidx.room.MultiInstanceInvalidationService"
-104-->[androidx.room:room-runtime-android:2.7.0] C:\Users\junoc\.gradle\caches\9.3.0\transforms\c5c721bbbd7657f0b3f4c90a2837a7ad\workspace\transformed\jetified-room-runtime-release\AndroidManifest.xml:25:13-74
-105            android:directBootAware="true"
-105-->[androidx.room:room-runtime-android:2.7.0] C:\Users\junoc\.gradle\caches\9.3.0\transforms\c5c721bbbd7657f0b3f4c90a2837a7ad\workspace\transformed\jetified-room-runtime-release\AndroidManifest.xml:26:13-43
-106            android:exported="false" />
-106-->[androidx.room:room-runtime-android:2.7.0] C:\Users\junoc\.gradle\caches\9.3.0\transforms\c5c721bbbd7657f0b3f4c90a2837a7ad\workspace\transformed\jetified-room-runtime-release\AndroidManifest.xml:27:13-37
+85-->[androidx.work:work-runtime:2.11.2] C:\Users\junoc\.gradle\caches\9.3.0\transforms\35546a2d6873015d4d5f4a9193514b5a\workspace\transformed\work-runtime-2.11.2\AndroidManifest.xml:56:13-44
+86            android:enabled="true"
+86-->[androidx.work:work-runtime:2.11.2] C:\Users\junoc\.gradle\caches\9.3.0\transforms\35546a2d6873015d4d5f4a9193514b5a\workspace\transformed\work-runtime-2.11.2\AndroidManifest.xml:57:13-35
+87            android:exported="false" />
+87-->[androidx.work:work-runtime:2.11.2] C:\Users\junoc\.gradle\caches\9.3.0\transforms\35546a2d6873015d4d5f4a9193514b5a\workspace\transformed\work-runtime-2.11.2\AndroidManifest.xml:58:13-37
+88        <receiver
+88-->[androidx.work:work-runtime:2.11.2] C:\Users\junoc\.gradle\caches\9.3.0\transforms\35546a2d6873015d4d5f4a9193514b5a\workspace\transformed\work-runtime-2.11.2\AndroidManifest.xml:60:9-69:20
+89            android:name="androidx.work.impl.background.systemalarm.RescheduleReceiver"
+89-->[androidx.work:work-runtime:2.11.2] C:\Users\junoc\.gradle\caches\9.3.0\transforms\35546a2d6873015d4d5f4a9193514b5a\workspace\transformed\work-runtime-2.11.2\AndroidManifest.xml:61:13-88
+90            android:directBootAware="false"
+90-->[androidx.work:work-runtime:2.11.2] C:\Users\junoc\.gradle\caches\9.3.0\transforms\35546a2d6873015d4d5f4a9193514b5a\workspace\transformed\work-runtime-2.11.2\AndroidManifest.xml:62:13-44
+91            android:enabled="false"
+91-->[androidx.work:work-runtime:2.11.2] C:\Users\junoc\.gradle\caches\9.3.0\transforms\35546a2d6873015d4d5f4a9193514b5a\workspace\transformed\work-runtime-2.11.2\AndroidManifest.xml:63:13-36
+92            android:exported="false" >
+92-->[androidx.work:work-runtime:2.11.2] C:\Users\junoc\.gradle\caches\9.3.0\transforms\35546a2d6873015d4d5f4a9193514b5a\workspace\transformed\work-runtime-2.11.2\AndroidManifest.xml:64:13-37
+93            <intent-filter>
+93-->[androidx.work:work-runtime:2.11.2] C:\Users\junoc\.gradle\caches\9.3.0\transforms\35546a2d6873015d4d5f4a9193514b5a\workspace\transformed\work-runtime-2.11.2\AndroidManifest.xml:66:13-68:29
+94                <action android:name="android.intent.action.BOOT_COMPLETED" />
+94-->[androidx.work:work-runtime:2.11.2] C:\Users\junoc\.gradle\caches\9.3.0\transforms\35546a2d6873015d4d5f4a9193514b5a\workspace\transformed\work-runtime-2.11.2\AndroidManifest.xml:67:17-79
+94-->[androidx.work:work-runtime:2.11.2] C:\Users\junoc\.gradle\caches\9.3.0\transforms\35546a2d6873015d4d5f4a9193514b5a\workspace\transformed\work-runtime-2.11.2\AndroidManifest.xml:67:25-76
+95            </intent-filter>
+96        </receiver>
+97        <receiver
+97-->[androidx.work:work-runtime:2.11.2] C:\Users\junoc\.gradle\caches\9.3.0\transforms\35546a2d6873015d4d5f4a9193514b5a\workspace\transformed\work-runtime-2.11.2\AndroidManifest.xml:70:9-80:20
+98            android:name="androidx.work.impl.diagnostics.DiagnosticsReceiver"
+98-->[androidx.work:work-runtime:2.11.2] C:\Users\junoc\.gradle\caches\9.3.0\transforms\35546a2d6873015d4d5f4a9193514b5a\workspace\transformed\work-runtime-2.11.2\AndroidManifest.xml:71:13-78
+99            android:directBootAware="false"
+99-->[androidx.work:work-runtime:2.11.2] C:\Users\junoc\.gradle\caches\9.3.0\transforms\35546a2d6873015d4d5f4a9193514b5a\workspace\transformed\work-runtime-2.11.2\AndroidManifest.xml:72:13-44
+100            android:enabled="true"
+100-->[androidx.work:work-runtime:2.11.2] C:\Users\junoc\.gradle\caches\9.3.0\transforms\35546a2d6873015d4d5f4a9193514b5a\workspace\transformed\work-runtime-2.11.2\AndroidManifest.xml:73:13-35
+101            android:exported="true"
+101-->[androidx.work:work-runtime:2.11.2] C:\Users\junoc\.gradle\caches\9.3.0\transforms\35546a2d6873015d4d5f4a9193514b5a\workspace\transformed\work-runtime-2.11.2\AndroidManifest.xml:74:13-36
+102            android:permission="android.permission.DUMP" >
+102-->[androidx.work:work-runtime:2.11.2] C:\Users\junoc\.gradle\caches\9.3.0\transforms\35546a2d6873015d4d5f4a9193514b5a\workspace\transformed\work-runtime-2.11.2\AndroidManifest.xml:75:13-57
+103            <intent-filter>
+103-->[androidx.work:work-runtime:2.11.2] C:\Users\junoc\.gradle\caches\9.3.0\transforms\35546a2d6873015d4d5f4a9193514b5a\workspace\transformed\work-runtime-2.11.2\AndroidManifest.xml:77:13-79:29
+104                <action android:name="androidx.work.diagnostics.REQUEST_DIAGNOSTICS" />
+104-->[androidx.work:work-runtime:2.11.2] C:\Users\junoc\.gradle\caches\9.3.0\transforms\35546a2d6873015d4d5f4a9193514b5a\workspace\transformed\work-runtime-2.11.2\AndroidManifest.xml:78:17-88
+104-->[androidx.work:work-runtime:2.11.2] C:\Users\junoc\.gradle\caches\9.3.0\transforms\35546a2d6873015d4d5f4a9193514b5a\workspace\transformed\work-runtime-2.11.2\AndroidManifest.xml:78:25-85
+105            </intent-filter>
+106        </receiver>
 107
-108        <receiver
-108-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\junoc\.gradle\caches\9.3.0\transforms\403a791140ab97d275462b1ab231d58d\workspace\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:34:9-52:20
-109            android:name="androidx.profileinstaller.ProfileInstallReceiver"
-109-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\junoc\.gradle\caches\9.3.0\transforms\403a791140ab97d275462b1ab231d58d\workspace\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:35:13-76
-110            android:directBootAware="false"
-110-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\junoc\.gradle\caches\9.3.0\transforms\403a791140ab97d275462b1ab231d58d\workspace\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:36:13-44
-111            android:enabled="true"
-111-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\junoc\.gradle\caches\9.3.0\transforms\403a791140ab97d275462b1ab231d58d\workspace\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:37:13-35
-112            android:exported="true"
-112-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\junoc\.gradle\caches\9.3.0\transforms\403a791140ab97d275462b1ab231d58d\workspace\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:38:13-36
-113            android:permission="android.permission.DUMP" >
-113-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\junoc\.gradle\caches\9.3.0\transforms\403a791140ab97d275462b1ab231d58d\workspace\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:39:13-57
-114            <intent-filter>
-114-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\junoc\.gradle\caches\9.3.0\transforms\403a791140ab97d275462b1ab231d58d\workspace\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:40:13-42:29
-115                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
-115-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\junoc\.gradle\caches\9.3.0\transforms\403a791140ab97d275462b1ab231d58d\workspace\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:41:17-91
-115-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\junoc\.gradle\caches\9.3.0\transforms\403a791140ab97d275462b1ab231d58d\workspace\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:41:25-88
-116            </intent-filter>
-117            <intent-filter>
-117-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\junoc\.gradle\caches\9.3.0\transforms\403a791140ab97d275462b1ab231d58d\workspace\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:43:13-45:29
-118                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
-118-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\junoc\.gradle\caches\9.3.0\transforms\403a791140ab97d275462b1ab231d58d\workspace\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:44:17-85
-118-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\junoc\.gradle\caches\9.3.0\transforms\403a791140ab97d275462b1ab231d58d\workspace\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:44:25-82
-119            </intent-filter>
-120            <intent-filter>
-120-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\junoc\.gradle\caches\9.3.0\transforms\403a791140ab97d275462b1ab231d58d\workspace\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:46:13-48:29
-121                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
-121-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\junoc\.gradle\caches\9.3.0\transforms\403a791140ab97d275462b1ab231d58d\workspace\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:47:17-88
-121-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\junoc\.gradle\caches\9.3.0\transforms\403a791140ab97d275462b1ab231d58d\workspace\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:47:25-85
-122            </intent-filter>
-123            <intent-filter>
-123-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\junoc\.gradle\caches\9.3.0\transforms\403a791140ab97d275462b1ab231d58d\workspace\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:49:13-51:29
-124                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
-124-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\junoc\.gradle\caches\9.3.0\transforms\403a791140ab97d275462b1ab231d58d\workspace\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:50:17-95
-124-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\junoc\.gradle\caches\9.3.0\transforms\403a791140ab97d275462b1ab231d58d\workspace\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:50:25-92
-125            </intent-filter>
-126        </receiver>
-127    </application>
-128
-129</manifest>
+108        <service
+108-->[androidx.room:room-runtime-android:2.7.0] C:\Users\junoc\.gradle\caches\9.3.0\transforms\c5c721bbbd7657f0b3f4c90a2837a7ad\workspace\transformed\jetified-room-runtime-release\AndroidManifest.xml:24:9-28:63
+109            android:name="androidx.room.MultiInstanceInvalidationService"
+109-->[androidx.room:room-runtime-android:2.7.0] C:\Users\junoc\.gradle\caches\9.3.0\transforms\c5c721bbbd7657f0b3f4c90a2837a7ad\workspace\transformed\jetified-room-runtime-release\AndroidManifest.xml:25:13-74
+110            android:directBootAware="true"
+110-->[androidx.room:room-runtime-android:2.7.0] C:\Users\junoc\.gradle\caches\9.3.0\transforms\c5c721bbbd7657f0b3f4c90a2837a7ad\workspace\transformed\jetified-room-runtime-release\AndroidManifest.xml:26:13-43
+111            android:exported="false" />
+111-->[androidx.room:room-runtime-android:2.7.0] C:\Users\junoc\.gradle\caches\9.3.0\transforms\c5c721bbbd7657f0b3f4c90a2837a7ad\workspace\transformed\jetified-room-runtime-release\AndroidManifest.xml:27:13-37
+112
+113        <receiver
+113-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\junoc\.gradle\caches\9.3.0\transforms\403a791140ab97d275462b1ab231d58d\workspace\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:34:9-52:20
+114            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+114-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\junoc\.gradle\caches\9.3.0\transforms\403a791140ab97d275462b1ab231d58d\workspace\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:35:13-76
+115            android:directBootAware="false"
+115-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\junoc\.gradle\caches\9.3.0\transforms\403a791140ab97d275462b1ab231d58d\workspace\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:36:13-44
+116            android:enabled="true"
+116-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\junoc\.gradle\caches\9.3.0\transforms\403a791140ab97d275462b1ab231d58d\workspace\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:37:13-35
+117            android:exported="true"
+117-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\junoc\.gradle\caches\9.3.0\transforms\403a791140ab97d275462b1ab231d58d\workspace\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:38:13-36
+118            android:permission="android.permission.DUMP" >
+118-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\junoc\.gradle\caches\9.3.0\transforms\403a791140ab97d275462b1ab231d58d\workspace\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:39:13-57
+119            <intent-filter>
+119-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\junoc\.gradle\caches\9.3.0\transforms\403a791140ab97d275462b1ab231d58d\workspace\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:40:13-42:29
+120                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
+120-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\junoc\.gradle\caches\9.3.0\transforms\403a791140ab97d275462b1ab231d58d\workspace\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:41:17-91
+120-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\junoc\.gradle\caches\9.3.0\transforms\403a791140ab97d275462b1ab231d58d\workspace\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:41:25-88
+121            </intent-filter>
+122            <intent-filter>
+122-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\junoc\.gradle\caches\9.3.0\transforms\403a791140ab97d275462b1ab231d58d\workspace\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:43:13-45:29
+123                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
+123-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\junoc\.gradle\caches\9.3.0\transforms\403a791140ab97d275462b1ab231d58d\workspace\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:44:17-85
+123-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\junoc\.gradle\caches\9.3.0\transforms\403a791140ab97d275462b1ab231d58d\workspace\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:44:25-82
+124            </intent-filter>
+125            <intent-filter>
+125-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\junoc\.gradle\caches\9.3.0\transforms\403a791140ab97d275462b1ab231d58d\workspace\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:46:13-48:29
+126                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
+126-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\junoc\.gradle\caches\9.3.0\transforms\403a791140ab97d275462b1ab231d58d\workspace\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:47:17-88
+126-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\junoc\.gradle\caches\9.3.0\transforms\403a791140ab97d275462b1ab231d58d\workspace\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:47:25-85
+127            </intent-filter>
+128            <intent-filter>
+128-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\junoc\.gradle\caches\9.3.0\transforms\403a791140ab97d275462b1ab231d58d\workspace\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:49:13-51:29
+129                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
+129-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\junoc\.gradle\caches\9.3.0\transforms\403a791140ab97d275462b1ab231d58d\workspace\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:50:17-95
+129-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\junoc\.gradle\caches\9.3.0\transforms\403a791140ab97d275462b1ab231d58d\workspace\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:50:25-92
+130            </intent-filter>
+131        </receiver>
+132    </application>
+133
+134</manifest>

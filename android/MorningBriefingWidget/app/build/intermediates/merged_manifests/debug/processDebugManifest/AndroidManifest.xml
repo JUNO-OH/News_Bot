@@ -51,6 +51,11 @@
                 android:resource="@xml/morning_briefing_widget_info" />
         </receiver>
 
+        <service
+            android:name="com.junoh.morningbriefing.NewsRemoteViewsService"
+            android:exported="false"
+            android:permission="android.permission.BIND_REMOTEVIEWS" />
+
         <provider
             android:name="androidx.startup.InitializationProvider"
             android:authorities="com.junoh.morningbriefing.androidx-startup"

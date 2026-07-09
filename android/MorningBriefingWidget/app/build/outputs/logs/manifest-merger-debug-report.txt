@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\junoc\Documents\GitHub\News_Bot_fresh\News_Bot\android\MorningBriefingWidget\app\src\main\AndroidManifest.xml:2:1-32:12
-INJECTED from C:\Users\junoc\Documents\GitHub\News_Bot_fresh\News_Bot\android\MorningBriefingWidget\app\src\main\AndroidManifest.xml:2:1-32:12
-INJECTED from C:\Users\junoc\Documents\GitHub\News_Bot_fresh\News_Bot\android\MorningBriefingWidget\app\src\main\AndroidManifest.xml:2:1-32:12
-INJECTED from C:\Users\junoc\Documents\GitHub\News_Bot_fresh\News_Bot\android\MorningBriefingWidget\app\src\main\AndroidManifest.xml:2:1-32:12
+ADDED from C:\Users\junoc\Documents\GitHub\News_Bot_fresh\News_Bot\android\MorningBriefingWidget\app\src\main\AndroidManifest.xml:2:1-38:12
+INJECTED from C:\Users\junoc\Documents\GitHub\News_Bot_fresh\News_Bot\android\MorningBriefingWidget\app\src\main\AndroidManifest.xml:2:1-38:12
+INJECTED from C:\Users\junoc\Documents\GitHub\News_Bot_fresh\News_Bot\android\MorningBriefingWidget\app\src\main\AndroidManifest.xml:2:1-38:12
+INJECTED from C:\Users\junoc\Documents\GitHub\News_Bot_fresh\News_Bot\android\MorningBriefingWidget\app\src\main\AndroidManifest.xml:2:1-38:12
 MERGED from [androidx.work:work-runtime-ktx:2.11.2] C:\Users\junoc\.gradle\caches\9.3.0\transforms\41c3ab6679e96e6e0c4eea5b385da3e1\workspace\transformed\work-runtime-ktx-2.11.2\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.work:work-runtime:2.11.2] C:\Users\junoc\.gradle\caches\9.3.0\transforms\35546a2d6873015d4d5f4a9193514b5a\workspace\transformed\work-runtime-2.11.2\AndroidManifest.xml:17:1-83:12
 MERGED from [androidx.core:core:1.17.0] C:\Users\junoc\.gradle\caches\9.3.0\transforms\5f2b9d9238eb48d66d8c9a76be5d3ddc\workspace\transformed\core-1.17.0\AndroidManifest.xml:17:1-30:12
@@ -43,8 +43,8 @@ MERGED from [androidx.work:work-runtime:2.11.2] C:\Users\junoc\.gradle\caches\9.
 	android:name
 		ADDED from C:\Users\junoc\Documents\GitHub\News_Bot_fresh\News_Bot\android\MorningBriefingWidget\app\src\main\AndroidManifest.xml:4:22-76
 application
-ADDED from C:\Users\junoc\Documents\GitHub\News_Bot_fresh\News_Bot\android\MorningBriefingWidget\app\src\main\AndroidManifest.xml:6:5-31:19
-INJECTED from C:\Users\junoc\Documents\GitHub\News_Bot_fresh\News_Bot\android\MorningBriefingWidget\app\src\main\AndroidManifest.xml:6:5-31:19
+ADDED from C:\Users\junoc\Documents\GitHub\News_Bot_fresh\News_Bot\android\MorningBriefingWidget\app\src\main\AndroidManifest.xml:6:5-37:19
+INJECTED from C:\Users\junoc\Documents\GitHub\News_Bot_fresh\News_Bot\android\MorningBriefingWidget\app\src\main\AndroidManifest.xml:6:5-37:19
 MERGED from [androidx.work:work-runtime:2.11.2] C:\Users\junoc\.gradle\caches\9.3.0\transforms\35546a2d6873015d4d5f4a9193514b5a\workspace\transformed\work-runtime-2.11.2\AndroidManifest.xml:28:5-81:19
 MERGED from [androidx.work:work-runtime:2.11.2] C:\Users\junoc\.gradle\caches\9.3.0\transforms\35546a2d6873015d4d5f4a9193514b5a\workspace\transformed\work-runtime-2.11.2\AndroidManifest.xml:28:5-81:19
 MERGED from [androidx.core:core:1.17.0] C:\Users\junoc\.gradle\caches\9.3.0\transforms\5f2b9d9238eb48d66d8c9a76be5d3ddc\workspace\transformed\core-1.17.0\AndroidManifest.xml:28:5-89
@@ -103,6 +103,14 @@ ADDED from C:\Users\junoc\Documents\GitHub\News_Bot_fresh\News_Bot\android\Morni
 		ADDED from C:\Users\junoc\Documents\GitHub\News_Bot_fresh\News_Bot\android\MorningBriefingWidget\app\src\main\AndroidManifest.xml:29:17-69
 	android:name
 		ADDED from C:\Users\junoc\Documents\GitHub\News_Bot_fresh\News_Bot\android\MorningBriefingWidget\app\src\main\AndroidManifest.xml:28:17-58
+service#com.junoh.morningbriefing.NewsRemoteViewsService
+ADDED from C:\Users\junoc\Documents\GitHub\News_Bot_fresh\News_Bot\android\MorningBriefingWidget\app\src\main\AndroidManifest.xml:32:9-35:40
+	android:exported
+		ADDED from C:\Users\junoc\Documents\GitHub\News_Bot_fresh\News_Bot\android\MorningBriefingWidget\app\src\main\AndroidManifest.xml:35:13-37
+	android:permission
+		ADDED from C:\Users\junoc\Documents\GitHub\News_Bot_fresh\News_Bot\android\MorningBriefingWidget\app\src\main\AndroidManifest.xml:34:13-69
+	android:name
+		ADDED from C:\Users\junoc\Documents\GitHub\News_Bot_fresh\News_Bot\android\MorningBriefingWidget\app\src\main\AndroidManifest.xml:33:13-51
 uses-sdk
 INJECTED from C:\Users\junoc\Documents\GitHub\News_Bot_fresh\News_Bot\android\MorningBriefingWidget\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\Users\junoc\Documents\GitHub\News_Bot_fresh\News_Bot\android\MorningBriefingWidget\app\src\main\AndroidManifest.xml

@@ -114,7 +114,7 @@ class MorningBriefingWidgetReceiver : AppWidgetProvider() {
             val listIntent = Intent(context, NewsRemoteViewsService::class.java).apply {
                 putExtra(AppWidgetManager.EXTRA_APPWIDGET_ID, appWidgetId)
                 // AppWidget hosts sometimes cache adapters. Unique data forces refresh.
-                data = Uri.parse("morningbriefing://news/$appWidgetId/${System.currentTimeMillis()}")
+                setData(Uri.parse("morningbriefing://news/$appWidgetId/${System.currentTimeMillis()}"))
             }
             views.setRemoteAdapter(R.id.news_list, listIntent)
             views.setEmptyView(R.id.news_list, R.id.news_empty)
@@ -142,8 +142,8 @@ class MorningBriefingWidgetReceiver : AppWidgetProvider() {
 
             val footerText = when {
                 error.isNotBlank() -> "업데이트 오류: $error"
-                data.generatedAt.isNotBlank() -> "v9 · 뉴스 영역은 스크롤 가능 · 탭해서 전체 브리핑 보기  ›"
-                else -> "v9 · 앱을 열어 새로고침"
+                data.generatedAt.isNotBlank() -> "v10 · 저장 뉴스 ${data.news.size}개 · 뉴스 영역 스크롤 가능  ›"
+                else -> "v10 · 앱을 열어 새로고침"
             }
             views.setTextViewText(R.id.widget_footer, footerText)
 

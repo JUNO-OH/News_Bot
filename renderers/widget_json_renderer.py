@@ -129,13 +129,35 @@ def extract_widget_payload(
         title = match.group(1).strip()
         if title and "..." not in title:
             titles.append(title)
-        if len(titles) >= 5:
+        if len(titles) >= 12:
             break
 
     selected_articles = articles or []
-    news = [_article_payload(a) for a in selected_articles[:8]]
+    news = [_article_payload(a) for a in selected_articles[:12]]
+
+    # 기사 배열이 3개 정도로 부족하면, Gemini가 만든 브리핑 제목/핵심 줄을 추가해서
+    # Android 스크롤 위젯이 빈 공간으로 남지 않게 한다.
+    existing_titles = {item.get("title", "").strip() for item in news}
+    fallback_pool = list(titles) + list(top3)
+    for title in fallback_pool:
+        title = _shorten(title, 72)
+        if not title or title in existing_titles:
+            continue
+        news.append({
+            "title": title,
+            "summary": "자세한 내용은 전체 브리핑에서 확인",
+            "source": "브리핑",
+            "published_at": "",
+            "url": "",
+            "image_url": "",
+            "category": "핵심",
+        })
+        existing_titles.add(title)
+        if len(news) >= 12:
+            break
+
     if not news:
-        news = [{"title": t, "summary": "", "source": "", "published_at": "", "url": "", "image_url": "", "category": "뉴스"} for t in (titles or top3)[:5]]
+        news = [{"title": t, "summary": "", "source": "", "published_at": "", "url": "", "image_url": "", "category": "뉴스"} for t in (titles or top3)[:8]]
 
     base_url = (base_url or os.getenv("PAGES_BASE_URL", "") or os.getenv("GITHUB_PAGES_BASE_URL", "")).rstrip("/")
     briefing_url = f"{base_url}/latest.html" if base_url else ""
